@@ -28,6 +28,11 @@ auto main(int argc, char **argv) -> int
      */
     fmt::print("Hello, {}!\n", app.get_name());
 
+
+    class BMP {
+    bool read(const std::string&  filename);
+    bool write(const std::string&  filename);
+    };
     /* INSERT YOUR CODE HERE */
 
     return 0; /* exit gracefully*/
