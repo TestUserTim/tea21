@@ -3,6 +3,7 @@
 
 #include "CLI/CLI.hpp"
 #include "config.h"
+#include "bmp.h"
 
 auto main(int argc, char **argv) -> int
 {
@@ -10,6 +11,7 @@ auto main(int argc, char **argv) -> int
      * CLI11 is a command line parser to add command line options
      * More info at https://github.com/CLIUtils/CLI11#usage
      */
+    std:string filename(DEFAULT_BMP_FILE);
     CLI::App app{PROJECT_NAME};
     try
     {
@@ -29,11 +31,7 @@ auto main(int argc, char **argv) -> int
     fmt::print("Hello, {}!\n", app.get_name());
 
 
-    class BMP {
-    bool read(const std::string&  filename);
-    bool write(const std::string&  filename);
-    };
-    /* INSERT YOUR CODE HERE */
+   
 
     return 0; /* exit gracefully*/
 }
